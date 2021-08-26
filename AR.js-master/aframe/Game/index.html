@@ -19,7 +19,6 @@ var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
-var Model_1 = document.querySelector("#Model_1");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
@@ -37,9 +36,6 @@ Video_0.muted=false;
 button.innerHTML="Unmute";
 Video_0.muted=true;
 }
-});
-Model_1.addEventListener("mousedown", function(evt){
-open("https://www.google.com/maps/place/Function+Villa/@17.4410892,78.5112738,14z/data=!4m9!1m2!2m1!1swedding+venue!3m5!1s0x3bcb90a75d28954f:0xb04b1008e934c888!8m2!3d17.4434275!4d78.4745302!15sCg13ZWRkaW5nIHZlbnVlWg8iDXdlZGRpbmcgdmVudWWSAQ13ZWRkaW5nX3ZlbnVlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJCTVc5cU16VlJSUkFC");
 });
 
         fullbutton.addEventListener("click", function (evt) {
@@ -123,9 +119,6 @@ if (markerFound == 1) {
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
 <video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Wedding.webm" webkit-playsinline playsinline controls muted></video>
-<a-asset-item id="Model_Asset_obj_1" src="models/Cube2.obj"></a-asset-item>
-<a-asset-item id="Model_Asset_mtl_1" src="models/New Material.mat"></a-asset-item>
-
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
@@ -135,8 +128,6 @@ if (markerFound == 1) {
 <!-- BEGIN: Unity Compiled Objects -->
 <a-video width="1.294952" height="0.6768866" src="#Video_Asset_0" class="intersectable" position="0 0.002 0" rotation="270 0 0" color="#FFFFFF" 
 ></a-video>
-<a-entity obj-model="obj: #Model_Asset_obj_1; mtl: #Model_Asset_mtl_1" scale="0.215 0.215 0.215" class="intersectable" position="-0.595 0.105 0.568" rotation="0 0 0" color="#FFFFFF" 
-></a-entity>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
