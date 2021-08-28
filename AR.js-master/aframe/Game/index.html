@@ -17,14 +17,14 @@ init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
-var Cube_0 = document.querySelector("#Cube_0");
+var Model_0 = document.querySelector("#Model_0");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 });
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 });
-Cube_0.addEventListener("mousedown", function(evt){
+Model_0.addEventListener("mousedown", function(evt){
 open("https://www.google.com");
 });
 
@@ -102,15 +102,18 @@ if (markerFound == 1) {
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
+<a-asset-item id="Model_Asset_obj_0" src="models/Button.obj"></a-asset-item>
+<a-asset-item id="Model_Asset_mtl_0" src="models/Button.mtl"></a-asset-item>
+
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
-<a-marker id="marker" type="pattern" preset="custom" src="pattern-BrideMerged (1).patt" url="pattern-BrideMerged (1).patt" emitevents="true" button>
+<a-marker id="marker" preset="hiro" emitevents="true" button>
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-box width="0.1" height="0.1" depth="0.1" class="intersectable" position="-0.064 0.049 0" rotation="0 0 0" color="#FFFFFF" 
-></a-box>
+<a-entity obj-model="obj: #Model_Asset_obj_0; mtl: #Model_Asset_mtl_0" scale="0.23122 0.23122 0.23122" class="intersectable" position="-0.062 0.067 0.237" rotation="0 -180 0" color="#FFFFFF" 
+></a-entity>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
