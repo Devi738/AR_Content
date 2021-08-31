@@ -18,9 +18,9 @@ var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
-var button2 = document.querySelector("#mapbutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
 var Model_1 = document.querySelector("#Model_1");
+var button2 = document.querySelector("#mapbutton");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
@@ -43,6 +43,16 @@ Video_0.muted=false;
 }else{
 button.innerHTML="Unmute";
 Video_0.muted=true;
+}
+});
+button2.addEventListener("click", function(evt){
+console.log("button2 clicked")
+if(Model_1.muted==true){
+button2.innerHTML="Open";
+Model_1.muted=false;
+}else{
+button2.innerHTML="Close";
+Model_1.muted=true;
 }
 });
 
@@ -119,7 +129,7 @@ if (markerFound == 1) {
             </input>
         </div>
 
-        <div style='position: absolute; bottom: 10px; right: 10px; width:100%; text-align: center; z-index: 1;'>      
+        <div style='position: absolute; bottom: 10px; left: 100px; width:100%; text-align: center; z-index: 1;'>      
             <button id="mapbutton" style='position: absolute; bottom: 10px'>
                 Map
             </button>
