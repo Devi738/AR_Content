@@ -36,6 +36,16 @@ marker.addEventListener("markerLost", function (evt) {
 Video_0.pause();
 });
 button.addEventListener("click", function(evt){
+console.log("button clicked")
+if(Video_0.muted==true){
+button.innerHTML="Mute";
+Video_0.muted=false;
+}else{
+button.innerHTML="Unmute";
+Video_0.muted=true;
+}
+});
+button2.addEventListener("click", function(evt){
 open("https://www.google.co.in/maps/place/Paradise+Cross+Roads,+Sandhu+Apartment,+Kalasiguda,+Secunderabad,+Telangana+500003/@17.4432902,78.4852776,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9a11cf746ec9:0x3c347de47a12e553!8m2!3d17.4432902!4d78.4874663");});
 
         fullbutton.addEventListener("click", function (evt) {
@@ -109,6 +119,12 @@ if (markerFound == 1) {
         <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
             <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
             </input>
+        </div>
+
+        <div style='position: absolute; bottom: 10px; right: 130px; width:100%; text-align: center; z-index: 1;'>      
+            <button id="mapbutton" style='position: absolute; bottom: 10px'>
+                Map
+            </button>
         </div>
 
         <!-- <a-scene embedded arjs='debugUIEnabled: false; sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
