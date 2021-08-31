@@ -18,6 +18,7 @@ var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
+var button2 = document.querySelector("#mapbutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
 var Model_1 = document.querySelector("#Model_1");
 marker.addEventListener("markerFound", function (evt) {
@@ -37,11 +38,11 @@ Video_0.pause();
 button.addEventListener("click", function(evt){
 console.log("button clicked")
 if(Video_0.muted==true){
-button.innerHTML="MuteInner";
+button.innerHTML="Mute";
 Video_0.muted=false;
 }else{
-button.innerHTML="UnmuteInner";
-Video_0.muted=false;
+button.innerHTML="Unmute";
+Video_0.muted=true;
 }
 });
 
@@ -109,13 +110,19 @@ if (markerFound == 1) {
 
         <div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>      
             <button id="mutebutton" style='position: absolute; bottom: 10px'>
-                Unmute
+                Open
             </button>
         </div>
 
         <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
             <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
             </input>
+        </div>
+
+        <div style='position: absolute; bottom: 10px; right: 10px; width:100%; text-align: center; z-index: 1;'>      
+            <button id="mapbutton" style='position: absolute; bottom: 10px'>
+                Map
+            </button>
         </div>
 
         <!-- <a-scene embedded arjs='debugUIEnabled: false; sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
