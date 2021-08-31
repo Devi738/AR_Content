@@ -19,8 +19,8 @@ var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
 var button2 = document.querySelector("#mapbutton");
+var Video_0 = document.querySelector("#Video_0");
 var Video_0 = document.querySelector("#Video_Asset_0");
-var Model_1 = document.querySelector("#Model_1");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
@@ -29,6 +29,8 @@ marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 Video_0.pause();
 });
+button2.addEventListener("click", function(evt){
+open("https://www.google.co.in/maps/place/SSS+KALYANA+NILAYAM/@17.4282291,78.5052793,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb99814000006b:0x566cf1fd0a972270!8m2!3d17.428224!4d78.507468");});
 marker.addEventListener("markerFound", function (evt) {
 Video_0.play();
 });
@@ -45,8 +47,6 @@ button.innerHTML="Unmute";
 Video_0.muted=true;
 }
 });
-button2.addEventListener("click", function(evt){
-open("https://www.google.com/maps/place/SSS+KALYANA+NILAYAM/@17.4282291,78.5052793,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb99814000006b:0x566cf1fd0a972270!8m2!3d17.428224!4d78.507468");});
 
         fullbutton.addEventListener("click", function (evt) {
             if (fullscreen == 0) {
@@ -121,7 +121,7 @@ if (markerFound == 1) {
             </input>
         </div>
 
-        <div style='position: absolute; bottom: 5px; right: 140px; width:100%; text-align: center; z-index: 1;'>      
+        <div style='position: absolute; bottom: 10px; right: 170px; width:100%; text-align: center; z-index: 1;'>      
             <button id="mapbutton" style='position: absolute; bottom: 10px'>
                 Wedding Map
             </button>
@@ -135,9 +135,6 @@ if (markerFound == 1) {
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
 <video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Wedding.webm" webkit-playsinline playsinline controls muted></video>
-<a-asset-item id="Model_Asset_obj_1" src="models/Button.obj"></a-asset-item>
-<a-asset-item id="Model_Asset_mtl_1" src="models/Button.mtl"></a-asset-item>
-
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
@@ -147,8 +144,6 @@ if (markerFound == 1) {
 <!-- BEGIN: Unity Compiled Objects -->
 <a-video width="1.213273" height="0.6004816" src="#Video_Asset_0" class="intersectable" position="0 0.051 -0.004" rotation="274.113 0 0" color="#FFFFFF" 
 ></a-video>
-<a-entity obj-model="obj: #Model_Asset_obj_1; mtl: #Model_Asset_mtl_1" scale="0.3 0.3 0.3" class="intersectable" position="-0.06869401 0 0.1783418" rotation="0 -182.1167 0" color="#FFFFFF" 
-></a-entity>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
