@@ -28,17 +28,23 @@ marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 Video_0.pause();
 });
-button.addEventListener("click", function(evt){
-console.log("button clicked")
-if(Video_0.muted==true){
-button.innerHTML="Mute";
-Video_0.muted=false;
-}else{
-button.innerHTML="Unmute";
-Video_0.muted=true;
-}
+marker.addEventListener("markerFound", function (evt) {
+Video_0.play();
+});
+marker.addEventListener("markerLost", function (evt) {
+Video_0.pause();
 });
 open("https://www.google.com");
+button.addEventListener("click", function(evt){
+console.log("button clicked")
+if(Model_1.muted==true){
+button.innerHTML="Open";
+Model_1.muted=false;
+}else{
+button.innerHTML="Close";
+Model_1.muted=true;
+}
+});
 
         fullbutton.addEventListener("click", function (evt) {
             if (fullscreen == 0) {
@@ -120,6 +126,7 @@ if (markerFound == 1) {
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
+<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Wedding.webm" webkit-playsinline playsinline controls muted></video>
 <a-asset-item id="Model_Asset_obj_1" src="models/Button.obj"></a-asset-item>
 <a-asset-item id="Model_Asset_mtl_1" src="models/Button.mtl"></a-asset-item>
 
