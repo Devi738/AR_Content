@@ -12,15 +12,16 @@
 <!-- BEGIN: Unity Compiled Events -->
 <script>
 var markerFound = 0;
-AFRAME.registerComponent('button', {
+AFRAME.registerComponent('button2', {
 init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
+var button2 = document.querySelector("#mapbutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
 var Model_1 = document.querySelector("#Model_1");
-var button2 = document.querySelector("#mapbutton");
+var Model_1 = document.querySelector("#Model_Asset_1");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
@@ -45,14 +46,12 @@ button.innerHTML="Unmute";
 Video_0.muted=true;
 }
 });
+
 button2.addEventListener("click", function(evt){
 console.log("button2 clicked")
 if(Model_1.muted==true){
 button2.innerHTML="Open";
-Model_1.muted=false;
-}else{
-button2.innerHTML="Close";
-Model_1.muted=true;
+open("https://www.google.co.in/maps/place/Paradise+Cross+Roads,+Sandhu+Apartment,+Kalasiguda,+Secunderabad,+Telangana+500003/@17.4432902,78.4852776,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9a11cf746ec9:0x3c347de47a12e553!8m2!3d17.4432902!4d78.4874663");;
 }
 });
 
@@ -120,7 +119,7 @@ if (markerFound == 1) {
 
         <div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>      
             <button id="mutebutton" style='position: absolute; bottom: 10px'>
-                Open
+                Unmute
             </button>
         </div>
 
@@ -129,7 +128,7 @@ if (markerFound == 1) {
             </input>
         </div>
 
-        <div style='position: absolute; bottom: 10px; left: 100px; width:100%; text-align: center; z-index: 1;'>      
+        <div style='position: absolute; bottom: 10px; right: 130px; width:100%; text-align: center; z-index: 1;'>      
             <button id="mapbutton" style='position: absolute; bottom: 10px'>
                 Map
             </button>
