@@ -13,7 +13,6 @@
 <script>
 var markerFound = 0;
 AFRAME.registerComponent('button', {
-AFRAME.registerComponent('button2', {
 init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
@@ -22,7 +21,6 @@ var button = document.querySelector("#mutebutton");
 var button2 = document.querySelector("#mapbutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
 var Model_1 = document.querySelector("#Model_1");
-var Model_1 = document.querySelector("#Model_Asset_1");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
@@ -119,12 +117,6 @@ if (markerFound == 1) {
         <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
             <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
             </input>
-        </div>
-
-        <div style='position: absolute; bottom: 10px; right: 130px; width:100%; text-align: center; z-index: 1;'>      
-            <button id="mapbutton" style='position: absolute; bottom: 10px'>
-                Map
-            </button>
         </div>
 
         <!-- <a-scene embedded arjs='debugUIEnabled: false; sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
