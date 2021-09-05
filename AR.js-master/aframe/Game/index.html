@@ -19,18 +19,19 @@ var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
 var button2 = document.querySelector("#mapbutton");
-var Video_0 = document.querySelector("#Video_0");
 var Video_0 = document.querySelector("#Video_Asset_0");
+var Video_1 = document.querySelector("#Video_Asset_1");
+var Model_2 = document.querySelector("#Model_2");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
+Video_1.play();
 });
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 Video_0.pause();
+Video_1.pause();
 });
-button2.addEventListener("click", function(evt){
-open("https://www.google.co.in/maps/place/SSS+KALYANA+NILAYAM/@17.4282291,78.5052793,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb99814000006b:0x566cf1fd0a972270!8m2!3d17.428224!4d78.507468");});
 marker.addEventListener("markerFound", function (evt) {
 Video_0.play();
 });
@@ -47,6 +48,24 @@ button.innerHTML="Unmute";
 Video_0.muted=true;
 }
 });
+marker.addEventListener("markerFound", function (evt) {
+Video_1.play();
+});
+marker.addEventListener("markerLost", function (evt) {
+Video_1.pause();
+});
+button.addEventListener("click", function(evt){
+console.log("button clicked")
+if(Video_1.muted==true){
+button.innerHTML="Mute";
+Video_1.muted=false;
+}else{
+button.innerHTML="Unmute";
+Video_1.muted=true;
+}
+});
+button2.addEventListener("click", function(evt){
+open("https://www.google.co.in/maps/place/Kowtha+Kamakoti+Kalyana+Nilayam/@17.428224,78.5052793,17z/data=!4m9!1m2!2m1!1swedding+venue!3m5!1s0x3bcb99884a16f8e1:0xc1a15fda3b12d999!8m2!3d17.428153!4d78.5070445!15sCg13ZWRkaW5nIHZlbnVlWg8iDXdlZGRpbmcgdmVudWWSAQ13ZWRkaW5nX3ZlbnVlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJCYzJKdUxUZFJSUkFC");});
 
         fullbutton.addEventListener("click", function (evt) {
             if (fullscreen == 0) {
@@ -123,7 +142,7 @@ if (markerFound == 1) {
 
         <div style='position: absolute; bottom: 10px; right: 170px; width:100%; text-align: center; z-index: 1;'>      
             <button id="mapbutton" style='position: absolute; bottom: 10px'>
-                Wedding Map
+                Venue
             </button>
         </div>
 
@@ -134,16 +153,24 @@ if (markerFound == 1) {
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
-<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Wedding.webm" webkit-playsinline playsinline controls muted></video>
+<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/Untitled.mp4" webkit-playsinline playsinline controls muted></video>
+<video id="Video_Asset_1" autoplay="false" loop crossorigin="anonymous" src="videos/Dance (1).mp4" webkit-playsinline playsinline controls muted></video>
+<a-asset-item id="Model_Asset_obj_2" src="models/stage.obj"></a-asset-item>
+<a-asset-item id="Model_Asset_mtl_2" src="models/stage.mtl"></a-asset-item>
+
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
-<a-marker id="marker" type="pattern" preset="custom" src="pattern-BrideMerged (1).patt" url="pattern-BrideMerged (1).patt" emitevents="true" button>
+<a-marker id="marker" type="pattern" preset="custom" src="pattern-BrideMerged (2).patt" url="pattern-BrideMerged (2).patt" emitevents="true" button>
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-video width="1.213273" height="0.6004816" src="#Video_Asset_0" class="intersectable" position="0 0.051 -0.004" rotation="274.113 0 0" color="#FFFFFF" 
+<a-video width="1.643539" height="0.8663638" src="#Video_Asset_0" class="intersectable" position="-0.072 0.271 -0.439" rotation="330.1696 0 0" color="#FFFFFF" 
 ></a-video>
+<a-video width="0.95" height="0.5508236" src="#Video_Asset_1" class="intersectable" position="0 0.421 0.16" rotation="330.1696 0 0" color="#FFFFFF" 
+></a-video>
+<a-entity obj-model="obj: #Model_Asset_obj_2; mtl: #Model_Asset_mtl_2" scale="0.077917 0.077917 0.077917" class="intersectable" position="0 0 0.202" rotation="330.8583 -0.05559015 -359.9401" color="#262626" 
+></a-entity>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
