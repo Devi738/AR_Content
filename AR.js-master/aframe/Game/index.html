@@ -31,8 +31,14 @@ markerFound = 0;
 Video_0.pause();
 Video_1.pause();
 });
-Video_0.muted=false
-Video_1.muted=false
+marker.addEventListener("markerFound", function (evt) {
+Video_0.muted = false; +
+});
+});
+marker.addEventListener("markerFound", function (evt) {
+Video_1.muted = false; +
+});
+});
 button2.addEventListener("click", function(evt){
 open("https://www.google.com/");});
 
