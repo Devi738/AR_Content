@@ -31,6 +31,7 @@ marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 Video_0.pause();
 Video_1.pause();
+Video_0.muted=false;
 });
 marker.addEventListener("markerFound", function (evt) {
 Video_0.play();
