@@ -17,6 +17,7 @@ init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
+var mapimagebutton = document.querySelector("#mapimage");
 var button = document.querySelector("#mutebutton");
 var button2 = document.querySelector("#mapbutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
@@ -24,7 +25,6 @@ var Video_1 = document.querySelector("#Video_Asset_1");
 var Model_2 = document.querySelector("#Model_2");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
-Video_0.muted=false;
 Video_0.play();
 Video_1.play();
 });
