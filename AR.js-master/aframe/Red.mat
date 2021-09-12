@@ -8,11 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Red
-  m_Shader: {fileID: 4800000, guid: ddd94aad04b8ef24798d652cf523db41, type: 3}
+  m_Shader: {fileID: 4800000, guid: a3f1deeeb6cf09043835f48c1b142978, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -43,6 +43,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -58,27 +62,39 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
-    - _ChromaKeyBrightnessRange: 0.5
-    - _ChromaKeyHueRange: 0.114
-    - _ChromaKeySaturationRange: 0.5
-    - _Cull: 2
-    - _Cutoff: 0.5
+    - _ChromaKeyBrightnessRange: 0.426
+    - _ChromaKeyHueRange: 0.467
+    - _ChromaKeySaturationRange: 0.751
+    - _ColorCutoff: 0
+    - _ColorFeathering: 0.233
+    - _Cull: 0
+    - _Cutoff: 0
+    - _Despill: 1
+    - _DespillLuminanceAdd: 0.2
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _MaskFeathering: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Sharpening: 0.5
+    - _Shininess: 0.7
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Transparency: 0.352
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _ChromaKeyColor: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 1}
+    - _ChromaKeyColor: {r: 0.10196079, g: 0.11764707, b: 0.14117648, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _KeyColor: {r: 0.009211485, g: 0.009433985, b: 0.009211485, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
+    - _TintColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
