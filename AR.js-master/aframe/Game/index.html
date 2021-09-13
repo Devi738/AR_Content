@@ -25,6 +25,7 @@ var Video_1 = document.querySelector("#Video_Asset_1");
 var Model_2 = document.querySelector("#Model_2");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
+Video_0.muted=false;
 Video_0.play();
 Video_1.play();
 });
@@ -119,7 +120,7 @@ if (markerFound == 1) {
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
         <div style='position: absolute; top: 0px; right: 0px; width:0%; text-align: center; z-index: 1;'>      
-            <button id="mutebutton" style = 'background-color: #FFFFFF; color: #000000; font-size: 0px; font-family: monospace'; bottom: 0px'>
+            <button id="mutebutton" style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 0px; font-family: monospace'; bottom: 0px'>
                 Sound
             </button>
         </div>
@@ -135,7 +136,7 @@ if (markerFound == 1) {
             </input>
         </div>
 
-        <div style='position: absolute; bottom: 5px; left: 130px; width:100%; text-align: right; z-index: 1;'>
+        <div style='position: absolute; bottom: 5px; left: 130px; width:0%; text-align: right; z-index: 1;'>
             <input type="image" id="mapimage" src="../Map.png" style='position: absolute; bottom: 0px; left: 35px;'>
             </input>
         </div>
