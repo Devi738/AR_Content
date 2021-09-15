@@ -17,42 +17,28 @@ init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
-var mapimagebutton = document.querySelector("#mapimage");
 var button = document.querySelector("#mutebutton");
 var button2 = document.querySelector("#mapbutton");
-var Model_0 = document.querySelector("#Model_0");
-var Video_1 = document.querySelector("#Video_Asset_1");
-var Video_2 = document.querySelector("#Video_Asset_2");
+var Video_0 = document.querySelector("#Video_0");
+var Video_0 = document.querySelector("#Video_Asset_0");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
-Video_1.play();
-Video_2.play();
+Video_0.play();
 });
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
-Video_1.pause();
-Video_2.pause();
+Video_0.pause();
 });
 button2.addEventListener("click", function(evt){
-open("https://www.google.com/maps/place/Kalyana+Mandapam+in+RTC+Cross+Road/@17.4025501,78.4902343,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb995dd1f38787:0x7b305a66c8f8d9c!8m2!3d17.402545!4d78.492423");});
+open("https://www.google.com/maps/place/Kalyana+Mandapam+in+RTC+Cross+Road/@17.402545,78.4902343,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb995dd1f38787:0x7b305a66c8f8d9c!8m2!3d17.402545!4d78.492423");});
 button.addEventListener("click", function(evt){
 console.log("button clicked")
-if(Video_1.muted==true){
+if(Video_0.muted==true){
 button.innerHTML="Mute";
-Video_1.muted=false;
+Video_0.muted=false;
 }else{
 button.innerHTML="Unmute";
-Video_1.muted=true;
-}
-});
-button.addEventListener("click", function(evt){
-console.log("button clicked")
-if(Video_2.muted==true){
-button.innerHTML="Mute";
-Video_2.muted=false;
-}else{
-button.innerHTML="Unmute";
-Video_2.muted=true;
+Video_0.muted=true;
 }
 });
 
@@ -118,25 +104,20 @@ if (markerFound == 1) {
 <!-- BEGIN: Middle HTML -->
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-        <div style='position: absolute; top: 0px; right: 0px; width:0%; text-align: center; z-index: 1;'>      
-            <button id="mutebutton" style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 0px; font-family: monospace'; bottom: 0px'>
+        <div style='position: absolute; top: 15px; right: 100px; width:100%; text-align: center; z-index: 1;'>      
+            <button id="mutebutton" style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 15px; font-family: monospace'; bottom: 10px'>
                 Sound
             </button>
         </div>
 
         <div style='position: absolute; top: 15px; right: 150px; width:100%; text-align: center; z-index: 1;'>      
-            <button id="mapbutton"src="../Map.png" style='position: absolute; style = 'background-color: #FFFFFF; color: #000000; font-size: 15px; font-family: monospace'; bottom: 10px'>
+            <button id="mapbutton"src="../Map.png" style='position: absolute; style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 15px; font-family: monospace'; bottom: 10px'>
                 Venue
             </button>
         </div>
 
         <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
             <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
-            </input>
-        </div>
-
-        <div style='position: absolute; bottom: 5px; left: 130px; width:0%; text-align: right; z-index: 1;'>
-            <input type="image" id="mapimage" src="../Map.png" style='position: absolute; bottom: 0px; left: 35px;'>
             </input>
         </div>
 
@@ -147,11 +128,7 @@ if (markerFound == 1) {
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
-<a-asset-item id="Model_Asset_obj_0" src="models/stage.obj"></a-asset-item>
-<a-asset-item id="Model_Asset_mtl_0" src="models/stage.mtl"></a-asset-item>
-
-<video id="Video_Asset_1" autoplay="false" loop crossorigin="anonymous" src="videos/Untitled.mp4" webkit-playsinline playsinline controls muted></video>
-<video id="Video_Asset_2" autoplay="false" loop crossorigin="anonymous" src="videos/IndianGirl.mp4" webkit-playsinline playsinline controls muted></video>
+<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/WeddingTemplate.mp4" webkit-playsinline playsinline controls muted></video>
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
@@ -159,12 +136,10 @@ if (markerFound == 1) {
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-entity obj-model="obj: #Model_Asset_obj_0; mtl: #Model_Asset_mtl_0" scale="0.1 0.1 0.1" class="intersectable" position="0 0 0" rotation="0 0 0" color="#000000" 
-></a-entity>
-<a-video width="2.182271" height="1.169805" src="#Video_Asset_1" class="intersectable" position="-0.098 0.741 -0.586" rotation="0 0 0" color="#FFFFFF" 
+<a-video width="2" height="1" src="#Video_Asset_0" class="intersectable" position="0 0.374 -0.8520001" rotation="315 0 0" color="#FFFFFF" 
 ></a-video>
-<a-video width="2.204423" height="1.310184" src="#Video_Asset_2" class="intersectable" position="-0.092 0.192 0.052" rotation="270 0 0" color="#FFFFFF" 
-></a-video>
+<a-plane width="1" height="1" class="intersectable" position="0 0.005 0" rotation="270 0 0" color="#FFFC00" 
+></a-plane>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
