@@ -20,6 +20,7 @@ var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
 var button2 = document.querySelector("#venuebutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
+var Model_2 = document.querySelector("#Model_2");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
@@ -107,6 +108,12 @@ if (markerFound == 1) {
             </button>
         </div>
 
+        <div style='position: absolute; top: 15px; right: 150px; width:100%; text-align: center; z-index: 1;'>      
+            <button id="venuebutton" style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 15px; font-family: monospace'; bottom: 10px'>
+                Venue
+            </button>
+        </div>
+
         <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
             <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
             </input>
@@ -120,8 +127,11 @@ if (markerFound == 1) {
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
 <video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/WeddingTemplate.mp4" webkit-playsinline playsinline controls muted></video>
-<a-asset-item id="Model_Asset_obj_2" src="models/uploads_files_1848504_cake.obj"></a-asset-item>
+<a-asset-item id="Model_Asset_obj_2" src="models/Cylinder.obj"></a-asset-item>
 <a-asset-item id="Model_Asset_mtl_2" src="models/Cylinder.mtl"></a-asset-item>
+
+<a-asset-item id="Model_Asset_obj_3" src="models/uploads_files_1848504_cake.obj"></a-asset-item>
+<a-asset-item id="Model_Asset_mtl_3" src="models/Cylinder.mtl"></a-asset-item>
 
 </a-assets>
 <!-- END: Unity Compiled Assets -->
@@ -134,7 +144,9 @@ if (markerFound == 1) {
 ></a-video>
 <a-plane width="1.091691" height="1.091691" src="textures/PinkCard.png" class="intersectable" position="0 0.005 0" rotation="270 0 0" color="#FFFFFF" 
 ></a-plane>
-<a-entity obj-model="obj: #Model_Asset_obj_2; mtl: #Model_Asset_mtl_2" scale="0.1 0.1 0.1" class="intersectable" position="0 0 0" rotation="0 0 0" color="#E7E7E7" 
+<a-entity obj-model="obj: #Model_Asset_obj_2; mtl: #Model_Asset_mtl_2" scale="0.1 0.1 0.1" class="intersectable" position="0 0 0" rotation="0 0 0" color="#FFFFFF" 
+></a-entity>
+<a-entity obj-model="obj: #Model_Asset_obj_3; mtl: #Model_Asset_mtl_3" scale="0.1 0.1 0.1" class="intersectable" position="0 0 0" rotation="0 0 0" color="#E7E7E7" 
 ></a-entity>
 <!-- END: Unity Compiled Objects -->
 
