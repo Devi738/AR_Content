@@ -17,7 +17,8 @@ init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
-var buttonmute = document.querySelector("#mutebutton");
+var button = document.querySelector("#mutebutton");
+var button2 = document.querySelector("#venuebutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
 var Model_2 = document.querySelector("#Model_2");
 marker.addEventListener("markerFound", function (evt) {
@@ -28,17 +29,18 @@ marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 Video_0.pause();
 });
-buttonmute.addEventListener("click", function(evt){
+button.addEventListener("click", function(evt){
 console.log("button clicked")
 if(Video_0.muted==true){
-buttonmute.innerHTML="Mute";
+button.innerHTML="Mute";
 Video_0.muted=false;
 }else{
-buttonmute.innerHTML="Unmute";
+button.innerHTML="Unmute";
 Video_0.muted=true;
 }
 });
-
+button2.addEventListener("click", function(evt){
+open("https://www.google.com/");});
 
         fullbutton.addEventListener("click", function (evt) {
             if (fullscreen == 0) {
