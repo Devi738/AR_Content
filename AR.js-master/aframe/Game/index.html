@@ -17,8 +17,8 @@ init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
-var button1 = document.querySelector("#mutebutton");
-var button2 = document.querySelector("#venuebutton");
+var button = document.querySelector("#mutebutton");
+var button = document.querySelector("#venuebutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
 var Model_2 = document.querySelector("#Model_2");
 marker.addEventListener("markerFound", function (evt) {
@@ -29,13 +29,13 @@ marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 Video_0.pause();
 });
-button1.addEventListener("click", function(evt){
+button.addEventListener("click", function(evt){
 console.log("button clicked")
 if(Video_0.muted==true){
-button1.innerHTML="Mute";
+button.innerHTML="Mute";
 Video_0.muted=false;
 }else{
-button1.innerHTML="Unmute";
+button.innerHTML="Unmute";
 Video_0.muted=true;
 }
 });
@@ -108,7 +108,10 @@ if (markerFound == 1) {
             <button id="mutebutton" style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 15px; font-family: monospace'; bottom: 10px'>
                 Sound
             </button>
-           <button id="venuebutton" style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 15px; font-family: monospace'; bottom: 10px'>
+        </div>
+
+        <div style='position: absolute; top: 15px; right: 150px; width:100%; text-align: center; z-index: 1;'>      
+            <button id="venuebutton" style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 15px; font-family: monospace'; bottom: 10px'>
                 Venue
             </button>
         </div>
