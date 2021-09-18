@@ -1,0 +1,13 @@
+# Blender MTL File: 'uploads_files_2494286_WoodenStairs.blend'
+# Material Count: 1
+
+newmtl Material
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.207888 0.199524 0.175624
+Ks 0.488372 0.488372 0.488372
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd DarkWood.jpeg
