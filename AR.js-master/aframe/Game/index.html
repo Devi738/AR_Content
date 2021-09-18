@@ -21,7 +21,6 @@ var button = document.querySelector("#mutebutton");
 var button2 = document.querySelector("#venuebutton");
 var Video_0 = document.querySelector("#Video_Asset_0");
 var Model_3 = document.querySelector("#Model_3");
-var Model (1)_4 = document.querySelector("#Model (1)_4");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
@@ -40,8 +39,6 @@ button.innerHTML="Unmute";
 Video_0.muted=true;
 }
 });
-button2.addEventListener("click", function(evt){
-open("https://www.google.com/maps/place/Kalyana+Mandapam+in+RTC+Cross+Road/@17.402545,78.4902343,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb995dd1f38787:0x7b305a66c8f8d9c!8m2!3d17.402545!4d78.492423");});
 button2.addEventListener("click", function(evt){
 open("https://www.google.com/maps/place/Kalyana+Mandapam+in+RTC+Cross+Road/@17.402545,78.4902343,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb995dd1f38787:0x7b305a66c8f8d9c!8m2!3d17.402545!4d78.492423");});
 
@@ -138,9 +135,6 @@ if (markerFound == 1) {
 <a-asset-item id="Model_Asset_obj_3" src="models/modern_staircase_2.obj"></a-asset-item>
 <a-asset-item id="Model_Asset_mtl_3" src="models/modern_staircase_2.mtl"></a-asset-item>
 
-<a-asset-item id="Model (1)_Asset_obj_4" src="models/modern_staircase_2.obj"></a-asset-item>
-<a-asset-item id="Model (1)_Asset_mtl_4" src="models/modern_staircase_2.mtl"></a-asset-item>
-
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
@@ -148,15 +142,13 @@ if (markerFound == 1) {
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-video width="1.956624" height="0.9783118" src="#Video_Asset_0" class="intersectable" position="0 0.67 -0.6300001" rotation="340 0 0" color="#FFFFFF" 
+<a-video width="1.956624" height="0.9783118" src="#Video_Asset_0" class="intersectable" position="0 0.486 -0.711" rotation="340 0 0" color="#FFFFFF" 
 ></a-video>
 <a-plane width="1.091691" height="1.091691" src="textures/PinkCard.png" class="intersectable" position="0 0.005 0" rotation="270 0 0" color="#FFFFFF" 
 ></a-plane>
 <a-entity obj-model="obj: #Model_Asset_obj_2; mtl: #Model_Asset_mtl_2" scale="0.04774209 0.04774209 0.04774209" class="intersectable" position="0 0.049 -0.411" rotation="0 0 0" color="#E7E7E7" 
 ></a-entity>
-<a-entity obj-model="obj: #Model_Asset_obj_3; mtl: #Model_Asset_mtl_3" scale="0.2566592 0.2566592 0.2566592" class="intersectable" position="-1.013 -0.317 -0.679" rotation="0 -355.8374 0" color="#FFFFFF" 
-></a-entity>
-<a-entity obj-model="obj: #Model (1)_Asset_obj_4; mtl: #Model (1)_Asset_mtl_4" scale="-0.2566592 0.2566592 0.2566592" class="intersectable" position="0.964 -0.317 -0.679" rotation="0 -355.8374 0" color="#FFFFFF" 
+<a-entity obj-model="obj: #Model_Asset_obj_3; mtl: #Model_Asset_mtl_3" scale="0.195061 0.195061 0.195061" class="intersectable" position="0.671 0.034 -0.202" rotation="0 -325.2585 0" color="#FFFFFF" 
 ></a-entity>
 <!-- END: Unity Compiled Objects -->
 
