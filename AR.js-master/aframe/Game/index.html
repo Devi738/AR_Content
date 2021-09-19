@@ -25,7 +25,7 @@ var Video_0 = document.querySelector("#Video_Asset_0");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 Video_0.play();
-Video_0.muted= false;
+Video_0.muted=false;
 });
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
@@ -106,13 +106,13 @@ if (markerFound == 1) {
 <!-- BEGIN: Middle HTML -->
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-        <div style='position: absolute; top: 15px; right: 0px; width:100%; text-align: center; z-index: 1;'>      
+        <div style='position: absolute; top: 15px; right: 0px; width:50%; text-align: center; z-index: 1;'>      
             <button id="mutebutton" style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 15px; font-family: monospace'; bottom: 0px'>
                 Sound
             </button>
         </div>
 
-        <div style='position: absolute; top: 15px; right: 150px; width:100%; text-align: center; z-index: 1;'>      
+        <div style='position: absolute; top: 15px; right: 150px; width:50%; text-align: center; z-index: 2;'>      
             <button id="mapbutton" style = 'background-color: #FFFFFF; color: #FFC0CB; font-size: 15px; font-family: monospace'; bottom: 0px'>
                 Venue
             </button>
@@ -120,11 +120,6 @@ if (markerFound == 1) {
 
         <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
             <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
-            </input>
-        </div>
-
-        <div style='position: absolute; bottom: 5px; left: 130px; width:0%; text-align: right; z-index: 1;'>
-            <input type="image" id="mapimage" src="../Map.png" style='position: absolute; bottom: 0px; left: 35px;'>
             </input>
         </div>
 
@@ -143,7 +138,7 @@ if (markerFound == 1) {
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-video width="1.8751" height="1" src="#Video_Asset_0" class="intersectable" position="0 0.013 0" rotation="270 0 0" color="#FFFFFF" 
+<a-video width="2.431442" height="1.2967" src="#Video_Asset_0" class="intersectable" position="0 0.013 0" rotation="270 0 0" color="#FFFFFF" 
 ></a-video>
 <!-- END: Unity Compiled Objects -->
 
